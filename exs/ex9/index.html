@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+  <head>
+    <title>Embedded Media</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  
+  <body>
+    <h1>Media examples</h1>
+    
+    <h2>Video sample</h2>
+    <figure id="videoContainer" data-fullscreen="false">
+      <video id="video" controls
+             width="1280"
+             height="720"
+             preload="metadata"
+             poster="images/poster.png">
+        <source src="video/sizzle.mp4" type="video/mp4">
+        <source src="video/sizzle.webm" type="video/webm">
+        <track label="English" kind="subtitles" src="video/subtitles_en.vtt" srclang="en" default>
+        <p>Your browser doesn't support HTML5 video. Here's a <a href="video/sizzle.mp4" title="video download">link to the video</a> instead.</p>
+      </video>
+      <div id="video-controls" class="controls" data-state="hidden">
+        <button id="playpause" type="button" data-state="play">Play/Pause</button>
+        <button id="stop" type="button" data-state="stop">Stop</button>
+        <div class="progress">
+          <progress id="progress" value="0" min="0">
+            <span id="progress-bar"></span>
+          </progress>
+        </div>
+        <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+        <button id="volinc" type="button" data-state="volup">Vol+</button>
+        <button id="voldec" type="button" data-state="voldown">Vol-</button>
+        <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
+        <button id="subtitles" type="button" date-state="subtitles">CC</button>
+      </div>
+    </figure>
+    
+    <h2>Audio example</h2>
+    <audio controls preload="metadata">
+      <source src="audio/acdc.mp3" type="audio/mp3">
+      <source src="audio/acdc.ogg" type="audio/ogg">
+      <p>Your browser doesn't support HTML5 audio. Here's a <a href="audio/acdc.mp3" title="audio download">link to the audio file</a> instead.</p>
+    </audio>
+    
+    <script src="js/video-player.js"></script>
+  </body>
+</html>

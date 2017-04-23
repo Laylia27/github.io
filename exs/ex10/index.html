@@ -3,12 +3,65 @@
   <head>
     <meta charset="utf-8">
     <title>Responsive Images</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        background-color: gray;
+      }
+      
+      body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+      }
+      
+      header {
+        background: url(images/future-city.jpg) no-repeat center;
+        height: 200px;
+      }
+      
+      section {
+        padding: 20px;
+      }
+      
+      p {
+        line-height: 1.5;
+      }
+      
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <picture>
-      <source media="(max-width: 799px)" srcset="images/mech-480w-closeup.jpg">
-      <source media="(min-width: 800px)" srcset="images/mech-1178w.jpg">
-      <img src="images/mech-1178w.jpg" alt="A mech in London, perhaps">
-    </picture>
+    <header>
+      
+    </header>
+    
+    <main>
+      <section>
+        <h1>Mech Attack!</h1>
+        
+        <p>Mechs will attack. You can bet on it.</p>
+
+        <picture>
+          <source media="(max-width: 799px)" srcset="images/mech-480w-closeup.jpg">
+          <source media="(min-width: 800px)" srcset="images/mech-1178w.jpg">
+          <img src="images/mech-1178w.jpg" alt="A mech in London, perhaps">
+        </picture>
+                
+        <p>Another fearsome mech.</p>
+        
+        <img srcset="images/graymech-320w.jpg,
+                     images/graymech-480w.jpg 1.5x,
+                     images/graymech-640w.jpg 2x"
+             src="images/graymech-640w.jpg" alt="Gray mech looking fierce">
+        
+        <!-- Insert 2nd picture here. -->
+      </section>
+    </main>
   </body>
 </html>
